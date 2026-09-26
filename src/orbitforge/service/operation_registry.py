@@ -8,6 +8,7 @@ OPERATIONS = {
     'visibility.passes': 'Find station visibility passes',
     'environment.eclipse': 'Classify sunlight and eclipse state',
     'link.budget': 'Evaluate radio-frequency link margin',
+    'link.pass': 'Evaluate time-varying pass budget with adaptive modulation and coding',
     'attitude.pointing': 'Evaluate spacecraft pointing geometry',
     'conjunction.screen': 'Screen close approaches and collision risk',
     'ephemeris.interpolate': 'Interpolate position and velocity ephemerides',
