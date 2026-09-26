@@ -11,3 +11,10 @@ def required_ebn0(name):
 def choose_modcod(ebn0_db, margin_db=1.0):
     viable = [(spectral_efficiency(n), n) for n in MODCOD if ebn0_db >= required_ebn0(n) + margin_db]
     return max(viable)[1] if viable else None
+
+MODCOD_ORDER = tuple(sorted(MODCOD, key=spectral_efficiency))
+
+def bitrate_bps(name, symbol_rate_sps):
+    if symbol_rate_sps <= 0:
+        raise ValueError('symbol rate')
+    return symbol_rate_sps * spectral_efficiency(name)
